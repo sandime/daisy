@@ -11,4 +11,13 @@ app.service("sightsService", function ($http, $q){
     this.getSights = function(){
         return deferred.promise;
     }
-});
+})
+.controller("SightsCtrl", function ($scope, sightsService){
+        var promise=sightsService.getSights();
+        promise.then(function(data)
+        {
+            $scope.seeing = data;
+            console.log($scope.seeing);
+            })
+
+    });
