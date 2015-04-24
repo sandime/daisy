@@ -10,6 +10,29 @@
 <div class="mainContainer" ng-app="SightsApp">
     <h1>Sights</h1>
     <div ng-controller="SightsCtrl">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Sight</th>
+                <th>Address</th>
+                <th>Phone</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="seeing in sight">
+                <td>
+                    {{seeing.place}}
+                </td>
+                <td>
+                    {{seeing.address}}
+                </td>
+                <td>
+                    {{seeing.phone}}
+                </td>
+            </tr>
+
+            </tbody>
+        </table>
 
     </div>
 </div>
