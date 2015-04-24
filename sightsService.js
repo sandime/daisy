@@ -16,8 +16,8 @@ app.service("sightsService", function ($http, $q){
         var promise=sightsService.getSights();
         promise.then(function(data)
         {
-            $scope.seeing = data;
-            console.log($scope.seeing);
+            $scope.sight = data.data;
+            console.log($scope.sight);
             })
 
     });
