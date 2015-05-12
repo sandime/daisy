@@ -22,6 +22,9 @@
             </tr>
             </thead>
             <tbody>
+            <!-- search.$ searches on anything
+             orderBy: 'sight'
+             orderBy: 'sight' | limitTo: 3-->
             <tr ng-repeat="seeing in sight | filter: searchSights">
                 <td>
                     {{seeing.place}}
